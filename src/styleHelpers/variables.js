@@ -1,0 +1,42 @@
+export const variables = {
+  fs: {
+    small: '0.8rem',
+    medium: '1.5rem',
+    large: '1.9rem',
+    largeLarger: '2.5rem',
+    larger: '3.2rem',
+    lg: '4.6rem',
+    xl: '6rem',
+    largest: '9rem',
+  },
+  fw: {
+    regular: 400,
+    semiBold: 600,
+    bold: 700,
+  },
+  size: {
+    smallest: '10px',
+    smaller: '30px',
+    small: '60px',
+    medium: '110px',
+    large: '150px',
+    larger: '185px',
+  },
+  color: {
+    bg: '#d99e04',
+    accent: '#24708c',
+    hover: '#45a9cf',
+    gray: '#75758B',
+    lightGray: '#f1f1f3',
+    txt: '#414A69',
+    txtDark: '#2B3144',
+    txtLight: '#4B5168',
+  },
+  ds: {
+    mobile: '40em',
+    tablet: '50em',
+    laptop: '64em',
+    desktop: '80em',
+    widescreen: '100em',
+  },
+};
