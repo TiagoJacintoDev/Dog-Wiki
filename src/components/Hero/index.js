@@ -11,6 +11,7 @@ import {
   Input,
   Button,
   AutoComplete,
+  TextColumn,
 } from './styles';
 
 export default function Hero({ dogs }) {
@@ -23,38 +24,40 @@ export default function Hero({ dogs }) {
   return (
     <Container>
       <BackgroundImage src={dogBg} />
-      <Logo src={dogLogo} />
-      <Paragraph>Get to know more about your dog breed </Paragraph>
-      <form style={{ position: 'relative' }}>
-        <Input
-          type='text'
-          placeholder='Enter your breed'
-          value={inputValue}
-          onChange={e => setInputValue(e.target.value)}
-          onFocus={() => setIsAutoCompleteOpen(true)}
-        />
-        <Button>
-          <MdOutlineSearch size={25} />
-        </Button>
-        {isAutoCompleteOpen && inputValue && filteredBreeds.length > 0 && (
-          <AutoComplete>
-            {filteredBreeds.map(breed => (
-              <p
-                style={{ cursor: 'pointer' }}
-                onClick={e => {
-                  setInputValue(e.target.innerText);
-                  setIsAutoCompleteOpen(false);
-                }}
-              >
-                {breed}
-              </p>
-            ))}
-          </AutoComplete>
-        )}
-      </form>
-      <Paragraph>
-        or try a <Link>random</Link> breed
-      </Paragraph>
+      <TextColumn>
+        <Logo src={dogLogo} />
+        <Paragraph>Get to know more about your dog breed </Paragraph>
+        <form style={{ position: 'relative' }}>
+          <Input
+            type='text'
+            placeholder='Enter your breed'
+            value={inputValue}
+            onChange={e => setInputValue(e.target.value)}
+            onFocus={() => setIsAutoCompleteOpen(true)}
+          />
+          <Button>
+            <MdOutlineSearch size={25} />
+          </Button>
+          {isAutoCompleteOpen && inputValue && filteredBreeds.length > 0 && (
+            <AutoComplete>
+              {filteredBreeds.map(breed => (
+                <p
+                  style={{ cursor: 'pointer' }}
+                  onClick={e => {
+                    setInputValue(e.target.innerText);
+                    setIsAutoCompleteOpen(false);
+                  }}
+                >
+                  {breed}
+                </p>
+              ))}
+            </AutoComplete>
+          )}
+        </form>
+        <Paragraph>
+          or try a <Link>random</Link> breed
+        </Paragraph>
+      </TextColumn>
     </Container>
   );
 }

@@ -27,7 +27,7 @@ export const variables = {
     accent: '#24708c',
     hover: '#45a9cf',
     gray: '#75758B',
-    lightGray: '#f1f1f3',
+    lightGray: '#d6d6dc',
     txt: '#414A69',
     txtDark: '#2B3144',
     txtLight: '#4B5168',

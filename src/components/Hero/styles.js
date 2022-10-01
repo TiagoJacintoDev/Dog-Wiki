@@ -9,14 +9,31 @@ export const Container = styled.div`
   gap: ${v.size.smaller};
   margin-top: ${v.size.smaller};
   margin-inline: auto;
-  width: min(${v.ds.desktop}, 100% - ${v.size.smaller});
+  width: min(${v.ds.widescreen}, 100% - ${v.size.smaller});
+
+  @media (min-width: ${v.ds.laptop}) {
+    flex-direction: row;
+    justify-content: center;
+    gap: ${v.size.small};
+  }
 `;
 
 export const BackgroundImage = styled.img`
-  width: 55%;
+  width: 50%;
   border-radius: 25%;
   border: 3px solid black;
   border-bottom: 0;
+
+  @media (min-width: ${v.ds.laptop}) {
+    width: 35%;
+  }
+`;
+
+export const TextColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: ${v.size.smallest};
 `;
 
 export const Logo = styled.img`
@@ -33,6 +50,7 @@ export const Input = styled.input`
   border-radius: 500px;
   border: 3px solid black;
   outline: 0;
+  width: 100%;
 
   &:focus-visible {
     border-color: ${v.color.bg};
@@ -55,7 +73,7 @@ export const AutoComplete = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: ${v.size.smaller};
+  gap: ${v.size.smallest};
   z-index: 100;
   background-color: white;
   max-height: ${v.size.larger};
