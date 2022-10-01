@@ -3,6 +3,7 @@ import Home from './Pages/Home';
 import { BreedList } from './Pages/BreedList';
 import { useQuery } from '@tanstack/react-query';
 import { axiosInstance } from './services/axiosInstance';
+import Navbar from './components/Navbar';
 
 export default function App() {
   const {
@@ -19,9 +20,11 @@ export default function App() {
   if (error) return <p>An error has occurred: {error.message}</p>;
 
   return (
-    <Routes>
-      <Route path='/' element={<Home dogs={dogs} />} />
-      <Route path='/dogs' element={<BreedList dogs={dogs} />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path='/' element={<Home dogs={dogs} />} />
+        <Route path='/dogs' element={<BreedList dogs={dogs} />} />
+      </Routes>
+    </>
   );
 }

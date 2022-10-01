@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 import { variables as v } from '../../styleHelpers/variables';
+import { Container as ContainerH } from '../../styleHelpers/helpers';
 import { Link as LinkH } from 'react-router-dom';
 
-export const Container = styled.div`
+export const Container = styled(ContainerH)`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: ${v.size.smaller};
   margin-top: ${v.size.smaller};
-  margin-inline: auto;
-  width: min(${v.ds.widescreen}, 100% - ${v.size.smaller});
 
   @media (min-width: ${v.ds.laptop}) {
     flex-direction: row;
@@ -53,7 +52,7 @@ export const Input = styled.input`
   width: 100%;
 
   &:focus-visible {
-    border-color: ${v.color.bg};
+    border-color: ${v.color.accent};
   }
 `;
 
@@ -94,8 +93,8 @@ export const AutoComplete = styled.div`
   }
 `;
 
-export const Link = styled(LinkH)`
-  color: ${v.color.accent};
+export const RandomLink = styled(LinkH)`
+  color: ${v.color.link};
   text-decoration: none;
   font-weight: ${v.fw.semiBold};
 
