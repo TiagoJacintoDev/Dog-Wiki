@@ -23,8 +23,8 @@ export const variables = {
     larger: '185px',
   },
   color: {
-    bg: '#d99e04',
-    accent: '#24708c',
+    accent: '#d99e04',
+    link: '#24708c',
     hover: '#45a9cf',
     gray: '#75758B',
     lightGray: '#d6d6dc',
