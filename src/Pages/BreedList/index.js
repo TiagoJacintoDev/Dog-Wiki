@@ -1,14 +1,6 @@
-import {
-  Caption,
-  Container,
-  DogImg,
-  Grid,
-  Logo,
-  Title,
-  BreedLink,
-  LinkList,
-} from './styles';
+import { Container, Title } from './styles';
 import Navbar from '../../components/Navbar';
+import { Grid, BreedLink, DogImg, Caption } from '../../styleHelpers/helpers';
 
 import { useState } from 'react';
 
