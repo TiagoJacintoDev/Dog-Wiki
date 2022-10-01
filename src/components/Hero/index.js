@@ -22,18 +22,10 @@ export default function Hero({ dogs }) {
   const filteredBreeds = dogBreeds.filter(breed =>
     breed.toLowerCase().includes(inputValue.toLowerCase())
   );
-  const currentDog = filteredBreeds
-    .find((dog, index) => index === 0)
-    .replace(' ', '');
-
-  const randomBreeds = dogs.map(dog => dog.name);
-  randomBreeds.sort(function () {
-    return 0.5 - Math.random();
-  });
-  const firstRandomBreed = randomBreeds
-    .find((dog, index) => index === 0)
-    .replace(' ', '');
-
+  let currentDog;
+  if (filteredBreeds.length > 0) {
+    currentDog = filteredBreeds.find((dog, index) => index === 0).replace(/\s/g, '');
+  }
   return (
     <Container>
       <BackgroundImage src={dogBg} />
@@ -71,8 +63,7 @@ export default function Hero({ dogs }) {
           )}
         </form>
         <Paragraph>
-          or try a <RandomLink to={`/dogs/${firstRandomBreed}`}>random</RandomLink>{' '}
-          breed
+          or try a <RandomLink to={`/random`}>random</RandomLink> breed
         </Paragraph>
       </TextColumn>
     </Container>
