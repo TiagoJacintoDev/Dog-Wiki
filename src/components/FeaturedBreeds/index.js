@@ -22,7 +22,7 @@ export default function FeaturedBreeds({ dogs }) {
         {fourRandomBreeds.map(breed => (
           <BreedLink
             style={{ margin: 0 }}
-            to={`/dogs/${breed.name.replace(' ', '')}`}
+            to={`/dogs/${breed.name.replace(/\s/g, '')}`}
             key={breed.id}
             onMouseEnter={() => setIdOfHovering(breed.id)}
             onMouseLeave={() => setIdOfHovering(null)}

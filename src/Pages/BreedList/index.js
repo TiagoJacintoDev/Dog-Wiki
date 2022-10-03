@@ -14,7 +14,7 @@ export function BreedList({ dogs }) {
         <Grid>
           {dogs.map(dog => (
             <BreedLink
-              to={`/dogs/${dog.name.replace(' ', '')}`}
+              to={`/dogs/${dog.name.replace(/\s/g, '')}`}
               key={dog.id}
               onMouseEnter={() => setIdOfHovering(dog.id)}
               onMouseLeave={() => setIdOfHovering(null)}

@@ -26,6 +26,7 @@ export const Grid = styled.div`
 
 export const DogImg = styled.img`
   object-fit: cover;
+  object-position: top;
   aspect-ratio: 4 / 3;
   border-radius: 20px;
   margin-bottom: ${v.size.smallest};
