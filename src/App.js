@@ -3,7 +3,7 @@ import Home from './Pages/Home';
 import { BreedList } from './Pages/BreedList';
 import { useQuery } from '@tanstack/react-query';
 import { axiosInstance } from './services/axiosInstance';
-import Navbar from './components/Navbar';
+import RandomBreed from './Pages/RandomBreed';
 
 export default function App() {
   const {
@@ -24,6 +24,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Home dogs={dogs} />} />
         <Route path='/dogs' element={<BreedList dogs={dogs} />} />
+        <Route path='/random' element={<RandomBreed dogs={dogs} />} />
       </Routes>
     </>
   );

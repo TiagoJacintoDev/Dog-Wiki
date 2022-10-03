@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function RandomBreed({ dogs }) {
-  const navigate = useNavigate();
+  const navigateTo = useNavigate();
   const randomBreeds = dogs.map(dog => dog.name);
   randomBreeds.sort(function () {
     return 0.5 - Math.random();
@@ -13,8 +13,8 @@ export default function RandomBreed({ dogs }) {
 
   useEffect(() => {
     const navigateTimeout = setTimeout(() => {
-      navigate(`/dogs/${firstRandomBreed}`);
-    }, 1000);
+      navigateTo(`/dogs/${firstRandomBreed}`);
+    }, 500);
 
     return () => {
       clearTimeout(navigateTimeout);

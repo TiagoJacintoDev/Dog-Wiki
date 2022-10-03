@@ -14,8 +14,10 @@ import {
   TextColumn,
 } from './styles';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Hero({ dogs }) {
+  const navigateTo = useNavigate();
   const [inputValue, setInputValue] = useState('');
   const [isAutoCompleteOpen, setIsAutoCompleteOpen] = useState(false);
   const dogBreeds = dogs.map(dog => dog.name);
@@ -26,13 +28,19 @@ export default function Hero({ dogs }) {
   if (filteredBreeds.length > 0) {
     currentDog = filteredBreeds.find((dog, index) => index === 0).replace(/\s/g, '');
   }
+
+  function navigateToDogPage(e) {
+    e.preventDefault();
+    navigateTo(`/dogs/${currentDog}`);
+  }
+
   return (
     <Container>
       <BackgroundImage src={dogBg} />
       <TextColumn>
         <Logo src={dogLogo} />
         <Paragraph>Get to know more about your dog breed </Paragraph>
-        <form onSubmit={e => e.preventDefault} style={{ position: 'relative' }}>
+        <form onSubmit={navigateToDogPage} style={{ position: 'relative' }}>
           <Input
             type='text'
             placeholder='Enter your breed'
@@ -40,8 +48,8 @@ export default function Hero({ dogs }) {
             onChange={e => setInputValue(e.target.value)}
             onFocus={() => setIsAutoCompleteOpen(true)}
           />
-          <Button>
-            <Link to={`/dogs/${currentDog}`}>
+          <Button type='button'>
+            <Link to={inputValue && `/dogs/${currentDog}`}>
               <MdOutlineSearch size={25} color='#75758B' />
             </Link>
           </Button>

@@ -1,12 +1,6 @@
 import { useMemo, useState } from 'react';
-import {
-  DogImg,
-  Grid,
-  BreedLink,
-  Caption,
-  SectionTitle,
-} from '../../styleHelpers/helpers';
-import { Container, PreTitle } from './styles';
+import { DogImg, Grid, BreedLink, Caption, Link } from '../../styleHelpers/helpers';
+import { Container, PreTitle, SectionTitle } from './styles';
 
 export default function FeaturedBreeds({ dogs }) {
   const [idOfHovering, setIdOfHovering] = useState(null);
@@ -21,7 +15,9 @@ export default function FeaturedBreeds({ dogs }) {
   return (
     <Container>
       <PreTitle>Complete Breed List</PreTitle>
-      <SectionTitle>66+ Breeds for you to explore</SectionTitle>
+      <SectionTitle>
+        <Link to='/dogs'>66+ Breeds for you to explore</Link>
+      </SectionTitle>
       <Grid>
         {fourRandomBreeds.map(breed => (
           <BreedLink
@@ -31,11 +27,13 @@ export default function FeaturedBreeds({ dogs }) {
             onMouseEnter={() => setIdOfHovering(breed.id)}
             onMouseLeave={() => setIdOfHovering(null)}
           >
-            <DogImg
+            <DogImg isHovering={idOfHovering === breed.id} src={breed.image.url} />
+            <Caption
+              style={{ marginBottom: '30px' }}
               isHovering={idOfHovering === breed.id}
-              src={breed.image.url}
-            ></DogImg>
-            <Caption isHovering={idOfHovering === breed.id}>{breed.name}</Caption>
+            >
+              {breed.name}
+            </Caption>
           </BreedLink>
         ))}
       </Grid>
