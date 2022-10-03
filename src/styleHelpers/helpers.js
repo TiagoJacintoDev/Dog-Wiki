@@ -42,3 +42,11 @@ export const SectionTitle = styled.h2`
   font-size: ${v.fs.largeLarger};
   font-weight: ${v.fw.bold};
 `;
+
+export const Link = styled(LinkH)`
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: ${v.color.accent};
+  }
+`;
