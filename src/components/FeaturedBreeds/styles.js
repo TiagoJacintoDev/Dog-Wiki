@@ -10,6 +10,9 @@ export const PreTitle = styled.p`
 `;
 
 export const Container = styled(ContainerH)`
+  @media (min-width: ${v.ds.laptop}) {
+    margin-top: ${v.size.small};
+  }
   background-color: black;
   color: white;
 `;

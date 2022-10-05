@@ -7,6 +7,7 @@ export const Characteristic = styled.strong`
 `;
 
 export const Container = styled.div`
+  margin-inline: ${v.size.smaller};
   margin-block: ${v.size.small};
   display: flex;
   flex-direction: column;
