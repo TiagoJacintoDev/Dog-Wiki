@@ -12,13 +12,13 @@ export default function Navbar() {
 
         <LinkList>
           <li>
-            <NavLink to='/about'>About</NavLink>
+            <NavLink>About</NavLink>
           </li>
           <li>
-            <NavLink to='/dogs'>Full Cat List</NavLink>
+            <NavLink to='/dogs'>Full Dog List</NavLink>
           </li>
           <li>
-            <NavLink to='/random'>Random Cat</NavLink>
+            <NavLink to='/random'>Random Dog</NavLink>
           </li>
         </LinkList>
       </Nav>
