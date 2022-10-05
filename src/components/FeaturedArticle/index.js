@@ -1,8 +1,9 @@
 import { Link, SectionTitle } from '../../styleHelpers/helpers';
 import { Container, Span, TextWrapper } from './styles';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import DogPlaying from '../../assets/images/golden-retriever-dog-playing-with-bubbles-y4a7me3kgkujl5ws.jpg';
 
-export default function BlogPost() {
+export default function FeaturedArticle() {
   return (
     <Container>
       <TextWrapper>
@@ -20,6 +21,7 @@ export default function BlogPost() {
           </Span>
         </Link>
       </TextWrapper>
+      <img width={'500vw'} src={DogPlaying} style={{ borderRadius: '10px' }} />
     </Container>
   );
 }
