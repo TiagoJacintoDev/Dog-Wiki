@@ -1,4 +1,4 @@
-# Rent A Car Landing Page
+# Dog Wiki
 
 ### [Live Demo](https://dog-wiki-app.vercel.app/)
 
