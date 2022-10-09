@@ -19,9 +19,9 @@ export const BreedLink = styled(LinkH)`
 `;
 
 export const Grid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 `;
 
 export const DogImg = styled.img`
