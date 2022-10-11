@@ -9,7 +9,7 @@ I've used this [API](https://thedogapi.com/) to fetch data from.
 #### 💡 Features
 * Get to know a random breed
 * Search for a specific breed
-* Auto Comlete on Search
+* Auto Complete on Search
 
 #### 🛠️ Built with 
  * React
