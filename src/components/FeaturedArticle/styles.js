@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { Container as ContainerH } from '../../styleHelpers/helpers';
-import { variables as v } from '../../styleHelpers/variables';
+import styled from "styled-components";
+import { Container as ContainerH } from "../../styleHelpers/helpers";
+import { variables as v } from "../../styleHelpers/variables";
 
 export const Container = styled(ContainerH)`
   display: flex;

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { variables as v } from '../../styleHelpers/variables';
-import { Link as LinkH } from 'react-router-dom';
+import styled from "styled-components";
+import { variables as v } from "../../styleHelpers/variables";
+import { Link as LinkH } from "react-router-dom";
 
 export const Nav = styled.div`
   display: flex;

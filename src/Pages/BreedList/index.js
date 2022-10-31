@@ -1,26 +1,28 @@
-import { Container, Title } from './styles';
-import Navbar from '../../components/Navbar';
-import { Grid, BreedLink, DogImg, Caption } from '../../styleHelpers/helpers';
+import { Container, Title } from "./styles";
+import Navbar from "../../components/Navbar";
+import { Grid, BreedLink, DogImg, Caption } from "../../styleHelpers/helpers";
+import { removeWhitespace } from "../../helpers/functions";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-export function BreedList({ dogs }) {
-  const [idOfHovering, setIdOfHovering] = useState(null);
+export default function BreedList({ dogs }) {
+  const [hoveringId, setHoveringId] = useState(null);
+
   return (
     <>
       <Navbar />
       <Container>
         <Title>Breed List</Title>
         <Grid>
-          {dogs.map(dog => (
+          {dogs.map((dog) => (
             <BreedLink
-              to={`/dogs/${dog.name.replace(/\s/g, '')}`}
+              to={`/dogs/${removeWhitespace(dog.name)}`}
               key={dog.id}
-              onMouseEnter={() => setIdOfHovering(dog.id)}
-              onMouseLeave={() => setIdOfHovering(null)}
+              onMouseEnter={() => setHoveringId(dog.id)}
+              onMouseLeave={() => setHoveringId(null)}
             >
-              <DogImg isHovering={idOfHovering === dog.id} src={dog.image.url} />
-              <Caption isHovering={idOfHovering === dog.id}>{dog.name}</Caption>
+              <DogImg isHovering={hoveringId === dog.id} src={dog.image.url} />
+              <Caption isHovering={hoveringId === dog.id}>{dog.name}</Caption>
             </BreedLink>
           ))}
         </Grid>

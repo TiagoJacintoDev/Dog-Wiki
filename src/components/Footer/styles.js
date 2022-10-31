@@ -1,6 +1,9 @@
-import styled from 'styled-components';
-import { Link as LinkH, Container as ContainerH } from '../../styleHelpers/helpers';
-import { variables as v } from '../../styleHelpers/variables';
+import styled from "styled-components";
+import {
+  Link as LinkH,
+  Container as ContainerH,
+} from "../../styleHelpers/helpers";
+import { variables as v } from "../../styleHelpers/variables";
 
 export const NavLink = styled(LinkH)`
   color: black;

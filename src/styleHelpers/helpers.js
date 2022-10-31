@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { variables as v } from './variables';
-import { Link as LinkH } from 'react-router-dom';
+import styled from "styled-components";
+import { variables as v } from "./variables";
+import { Link as LinkH } from "react-router-dom";
 
 export const Container = styled.div`
   border-radius: 40px;

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { variables as v } from '../../styleHelpers/variables';
-import { Container as ContainerH } from '../../styleHelpers/helpers';
+import styled from "styled-components";
+import { variables as v } from "../../styleHelpers/variables";
+import { Container as ContainerH } from "../../styleHelpers/helpers";
 
 export const Container = styled(ContainerH)`
   background-color: black;

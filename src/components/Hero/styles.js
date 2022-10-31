@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { variables as v } from '../../styleHelpers/variables';
-import { Container as ContainerH } from '../../styleHelpers/helpers';
-import { Link as LinkH } from 'react-router-dom';
+import styled from "styled-components";
+import { variables as v } from "../../styleHelpers/variables";
+import { Container as ContainerH } from "../../styleHelpers/helpers";
+import { Link as LinkH } from "react-router-dom";
 
 export const Container = styled(ContainerH)`
   display: flex;
@@ -45,7 +45,8 @@ export const Paragraph = styled.p`
 
 export const Input = styled.input`
   font-size: ${v.fs.medium};
-  padding: ${v.size.smallest} ${v.size.small} ${v.size.smallest} ${v.size.smaller};
+  padding: ${v.size.smallest} ${v.size.small} ${v.size.smallest}
+    ${v.size.smaller};
   border-radius: 500px;
   border: 3px solid black;
   outline: 0;
