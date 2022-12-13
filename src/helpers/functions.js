@@ -1,5 +1,5 @@
 export function removeWhitespace(name) {
-  return name.replace(/\s/g, "");
+  return name.replace(/ /g, "");
 }
 
 export function addWhitespace(name) {

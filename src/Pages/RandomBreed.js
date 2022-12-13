@@ -11,12 +11,6 @@ export default function RandomBreed({ dogs }) {
   const firstRandomBreed = randomBreeds.find((dog, index) => index === 0);
 
   useEffect(() => {
-    const navigateTimeout = setTimeout(() => {
-      navigateTo(`/dogs/${removeWhitespace(firstRandomBreed)}`);
-    }, 500);
-
-    return () => {
-      clearTimeout(navigateTimeout);
-    };
+    navigateTo(`/dogs/${removeWhitespace(firstRandomBreed)}`);
   }, []);
 }

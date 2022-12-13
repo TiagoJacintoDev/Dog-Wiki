@@ -34,6 +34,7 @@ export default function Hero({ dogs }) {
 
   function navigateToDogPage(e) {
     e.preventDefault();
+    if (!currentDog) return;
     navigateTo(`/dogs/${removeWhitespace(currentDog)}`);
   }
 
@@ -52,7 +53,7 @@ export default function Hero({ dogs }) {
             onFocus={() => setIsAutoCompleteOpen(true)}
           />
           <Button type="button">
-            <Link to={inputValue && `/dogs/${removeWhitespace(currentDog)}`}>
+            <Link onClick={navigateToDogPage}>
               <MdOutlineSearch size={25} color="#75758B" />
             </Link>
           </Button>
